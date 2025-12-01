@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CREST Cybersecurity Club</title>
+    <link rel="stylesheet" href="/css/about.css">
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(180deg, rgba(2, 6, 12, 0.6), rgba(2, 6, 12, 0.25));
+            backdrop-filter: blur(8px) saturate(1.05);
+            border-bottom: 1px solid rgba(71, 85, 105, 0.2);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 64px;
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: absolute;
+        }
+
+        .nav-left {
+            left: 1rem;
+        }
+
+        .nav-right {
+            right: 1rem;
+        }
+
+        .nav-center {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-center-logo {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            object-fit: cover;
+            border-radius: 8px;
+            padding-top: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-center-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            padding: 0.5rem 0.75rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        /* Override legacy about.css underline pseudo-element */
+        .nav-link::after {
+            display: none !important;
+        }
+
+        .nav-link:hover {
+            color: #00ffd1;
+            border-bottom-color: #00ffd1;
+        }
+
+        .nav-link.active {
+            color: #00ffd1;
+            border-bottom-color: #00ffd1;
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #94a3b8;
+            position: relative;
+            transition: background 0.3s;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: #94a3b8;
+            transition: transform 0.3s;
+        }
+
+        .hamburger::before {
+            top: -8px;
+        }
+
+        .hamburger::after {
+            top: 8px;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: rgba(15, 23, 42, 0.98);
+            border-top: 1px solid rgba(71, 85, 105, 0.2);
+            padding: 1rem;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-link {
+            display: block;
+            color: #94a3b8;
+            text-decoration: none;
+            padding: 0.75rem 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .mobile-link:hover,
+        .mobile-link.active {
+            color: #00ffd1;
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-left,
+            .nav-right {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                z-index: 1001;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- Navbar (standardized) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="resource.html" class="nav-link">Resources</a>
+            </div>
+
+            <!-- center large square logo -->
+            <div class="nav-center">
+                <a href="../index.html" aria-label="Home">
+                    <img src="../assect/logo.png" alt="CREAST" class="nav-center-logo">
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="/pages/event/events.html" class="nav-link">Events</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link active">About</a>
+            <a href="resource.html" class="mobile-link">Resources</a>
+            <a href="/pages/event/events.html" class="mobile-link">Events</a>
+            <a href="team.html" class="mobile-link">Team</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <canvas id="gridCanvas" class="grid-canvas"></canvas>
+
+        <div class="gradient-overlay"></div>
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+
+        <div class="hero-container">
+            <div class="hero-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>About CREST</span>
+            </div>
+            <h1 class="hero-title">
+                Empowering the Next Generation of
+                <span class="gradient-text">Cyber Defenders</span>
+            </h1>
+            <p class="hero-description">
+                We are a community of passionate cybersecurity enthusiasts dedicated to learning,
+                competing, and innovating in the ever-evolving world of information security.
+            </p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Journey</span>
+                <h2 class="section-title">The CREST Story</h2>
+            </div>
+
+            <div class="story-content">
+                <div class="story-card">
+                    <div class="card-border"></div>
+                    <div class="card-glow"></div>
+                    <div class="story-year">2020</div>
+                    <h3 class="story-heading">The Beginning</h3>
+                    <p class="story-text">
+                        Founded by a small group of security enthusiasts, CREST started as a weekly meetup
+                        to discuss the latest vulnerabilities, exploits, and defense strategies. What began
+                        in a small room has grown into one of the most active cybersecurity communities.
+                    </p>
+                </div>
+
+                <div class="story-card">
+                    <div class="card-border"></div>
+                    <div class="card-glow"></div>
+                    <div class="story-year">2022</div>
+                    <h3 class="story-heading">Growth & Recognition</h3>
+                    <p class="story-text">
+                        With over 300 members and multiple CTF competition wins, CREST became recognized
+                        as a leading cybersecurity club. We expanded our offerings to include workshops,
+                        bug bounty programs, and industry partnerships.
+                    </p>
+                </div>
+
+                <div class="story-card">
+                    <div class="card-border"></div>
+                    <div class="card-glow"></div>
+                    <div class="story-year">2024</div>
+                    <h3 class="story-heading">The Future</h3>
+                    <p class="story-text">
+                        Today, CREST stands as a beacon for aspiring ethical hackers and security professionals.
+                        We continue to push boundaries, mentor newcomers, and contribute to making the digital
+                        world a safer place for everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-section">
+        <div class="section-container">
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="mission-title">Our Mission</h3>
+                    <p class="mission-text">
+                        To cultivate a thriving community of cybersecurity professionals by providing
+                        hands-on learning experiences, fostering ethical hacking practices, and bridging
+                        the gap between academic knowledge and real-world security challenges.
+                    </p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mission-title">Our Vision</h3>
+                    <p class="mission-text">
+                        To be the premier platform where aspiring security professionals transform into
+                        industry leaders, contributing to a more secure digital ecosystem through innovation,
+                        education, and ethical practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="activities-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Activities</span>
+                <h2 class="section-title">What We Do</h2>
+                <p class="section-subtitle">
+                    From beginner-friendly workshops to advanced penetration testing labs,
+                    we offer diverse opportunities for growth
+                </p>
+            </div>
+
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="activity-title">CTF Competitions</h3>
+                    <p class="activity-description">
+                        Participate in Capture The Flag competitions, solve real-world challenges,
+                        and compete against top teams globally.
+                    </p>
+                    <div class="activity-tags">
+                        <span class="tag">Crypto</span>
+                        <span class="tag">Web</span>
+                        <span class="tag">Pwn</span>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="activity-title">Workshops & Training</h3>
+                    <p class="activity-description">
+                        Regular hands-on workshops covering topics from basic networking to
+                        advanced exploitation techniques.
+                    </p>
+                    <div class="activity-tags">
+                        <span class="tag">Linux</span>
+                        <span class="tag">Network</span>
+                        <span class="tag">Tools</span>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="activity-title">Bug Bounty Programs</h3>
+                    <p class="activity-description">
+                        Learn responsible disclosure and earn rewards by finding vulnerabilities
+                        in real-world applications.
+                    </p>
+                    <div class="activity-tags">
+                        <span class="tag">OWASP</span>
+                        <span class="tag">XSS</span>
+                        <span class="tag">SQLi</span>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="activity-title">Community Events</h3>
+                    <p class="activity-description">
+                        Network with industry professionals, attend talks, and participate in
+                        hackathons and security conferences.
+                    </p>
+                    <div class="activity-tags">
+                        <span class="tag">Talks</span>
+                        <span class="tag">Meetups</span>
+                        <span class="tag">Hackathons</span>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                    </div>
+                    <h3 class="activity-title">Practice Labs</h3>
+                    <p class="activity-description">
+                        Access 24/7 lab infrastructure with vulnerable machines, custom challenges,
+                        and realistic attack scenarios.
+                    </p>
+                    <div class="activity-tags">
+                        <span class="tag">VMs</span>
+                        <span class="tag">Labs</span>
+                        <span class="tag">Practice</span>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="activity-title">Certifications</h3>
+                    <p class="activity-description">
+                        Prepare for industry certifications with study groups, practice exams,
+                        and mentorship from certified professionals.
+                    </p>
+                    <div class="activity-tags">
+                        <span class="tag">CEH</span>
+                        <span class="tag">OSCP</span>
+                        <span class="tag">Security+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join -->
+    <section class="join-section">
+        <div class="section-container">
+            <div class="join-content">
+                <div class="join-text">
+                    <span class="section-tag">Join Us</span>
+                    <h2 class="section-title">Why Choose CREST?</h2>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Hands-On Learning</h4>
+                                <p>Practice real-world scenarios in safe, controlled environments</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Industry Connections</h4>
+                                <p>Network with professionals and access internship opportunities</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Mentorship Program</h4>
+                                <p>Learn from experienced members and industry veterans</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Competitive Edge</h4>
+                                <p>Build a strong portfolio through CTF wins and real projects</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Community Support</h4>
+                                <p>Join a supportive community that grows together</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Free Resources</h4>
+                                <p>Access premium tools, courses, and lab infrastructure</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="cta-button">
+                        <span><a href="/pages/join.html" target="_blank" rel="noopener noreferrer"
+                                style="text-decoration: none; color: white;">Join CREST Today</a></span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="join-visual">
+                    <div class="visual-card">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <span class="terminal-dot dot-red"></span>
+                                <span class="terminal-dot dot-yellow"></span>
+                                <span class="terminal-dot dot-green"></span>
+                                <span class="terminal-title">crest@terminal</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">whoami</span>
+                                </div>
+                                <div class="terminal-line output">future_security_expert</div>
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">join --club=crest</span>
+                                </div>
+                                <div class="terminal-line output success">✓ Welcome to CREST!</div>
+                                <div class="terminal-line output">Initializing learning path...</div>
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="cursor-blink">_</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="section-container">
+            <h2 class="cta-title">Ready to Start Your Journey?</h2>
+            <p class="cta-description">Join hundreds of students mastering cybersecurity</p>
+            <div class="cta-buttons">
+                <button class="btn-primary">
+                    <a href="/pages/event/events.html" target="_blank" rel="noopener noreferrer"
+                        style="text-decoration: none; color: white;">Get Started</a>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                <button class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resources
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section
+        style="background: linear-gradient(135deg, rgba(88, 28, 135, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%); padding: 4rem 1rem; margin-top: 4rem;">
+        <div class="section-container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span
+                    style="display: inline-block; padding: 0.5rem 1rem; background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 50px; color: #a855f7; font-size: 0.875rem; font-weight: 500; margin-bottom: 1rem;">Built
+                    With Passion</span>
+                <h2
+                    style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Meet the Developer</h2>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div style="position: relative; border-radius: 2rem; overflow: hidden; background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%); border: 1px solid rgba(168, 85, 247, 0.3); backdrop-filter: blur(12px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 35px 60px -12px rgba(168, 85, 247, 0.3)';"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.5)';">
+                    <div style="padding: 2.5rem; position: relative; z-index: 1;">
+                        <!-- Developer Avatar Section -->
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <!-- <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #a855f7, #ec4899); padding: 3px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);">
+                                 <div style="width: 100%; background: url('/assect/dev/profile.png'); height: 100%; border-radius: 50%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                                    <i class="fas fa-code" style="color: #a855f7;"></i>
+                                     
+                                </div> -->
+                            <!-- <img src="/assect/dev/profile.png" alt="">  
+                            </div> -->
+                            <h3 style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Sunny
+                                Sharma</h3>
+                            <p style="font-size: 1.1rem; color: #06b6d4; font-weight: 600; margin-bottom: 1rem;">Full
+                                Stack Developer & Penetration Tester</p>
+                            <p style="color: #9ca3af; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">Building
+                                secure, scalable web applications with MERN stack. B.Sc. Cybersecurity student
+                                specializing in penetration testing and vulnerability assessment.</p>
+                        </div>
+
+                        <!-- Skills Tags -->
+                        <div
+                            style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 2rem;">
+                            <span
+                                style="display: inline-block; padding: 0.4rem 0.9rem; background: rgba(59, 130, 246, 0.2); border: 1px solid rgba(59, 130, 246, 0.5); border-radius: 20px; color: #60a5fa; font-size: 0.85rem; font-weight: 500;">MERN
+                                Stack</span>
+                            <span
+                                style="display: inline-block; padding: 0.4rem 0.9rem; background: rgba(168, 85, 247, 0.2); border: 1px solid rgba(168, 85, 247, 0.5); border-radius: 20px; color: #c084fc; font-size: 0.85rem; font-weight: 500;">Python
+                                Dev</span>
+                            <span
+                                style="display: inline-block; padding: 0.4rem 0.9rem; background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.5); border-radius: 20px; color: #fca5a5; font-size: 0.85rem; font-weight: 500;">Penetration
+                                Tester</span>
+                        </div>
+
+                        <!-- Social Links & CTA (matching team card style) -->
+                        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                            <a href="mailto:sunny.sharma24@pcu.edu.in" title="Email"
+                                style="width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #ec4899, #f43f5e); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); transition: all 0.3s; color: #fff; text-decoration: none; position: relative;"
+                                onmouseover="this.style.transform='scale(1.1) translateY(-0.25rem)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.5)';"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.3)';">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    style="width: 1.25rem; height: 1.25rem;">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <div
+                                    style="position: absolute; top: -2.5rem; left: 50%; transform: translateX(-50%); padding: 0.375rem 0.75rem; border-radius: 0.5rem; background: #0f172a; color: #fff; font-size: 0.75rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+                                    Email</div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sunny-sharma-4b75a6325" target="_blank"
+                                rel="noopener noreferrer" title="LinkedIn"
+                                style="width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #3b82f6, #2563eb); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); transition: all 0.3s; color: #fff; text-decoration: none; position: relative;"
+                                onmouseover="this.style.transform='scale(1.1) translateY(-0.25rem)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.5)';"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.3)';">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    style="width: 1.25rem; height: 1.25rem;">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                <div
+                                    style="position: absolute; top: -2.5rem; left: 50%; transform: translateX(-50%); padding: 0.375rem 0.75rem; border-radius: 0.5rem; background: #0f172a; color: #fff; font-size: 0.75rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+                                    LinkedIn</div>
+                            </a>
+                            <a href="https://github.com/sunny8240" target="_blank" rel="noopener noreferrer"
+                                title="GitHub"
+                                style="width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #374151, #111827); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); transition: all 0.3s; color: #fff; text-decoration: none; position: relative;"
+                                onmouseover="this.style.transform='scale(1.1) translateY(-0.25rem)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.5)';"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.3)';">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    style="width: 1.25rem; height: 1.25rem;">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                <div
+                                    style="position: absolute; top: -2.5rem; left: 50%; transform: translateX(-50%); padding: 0.375rem 0.75rem; border-radius: 0.5rem; background: #0f172a; color: #fff; font-size: 0.75rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+                                    GitHub</div>
+                            </a>
+                            <!-- TryHackMe (ONLY Image + TOOLTIP) -->
+                            <a href="https://tryhackme.com/p/0xSunny" target="_blank" rel="noopener noreferrer" style="position: relative; width: 2.75rem; height: 2.75rem; border-radius: 0.75rem;
+                                display: inline-flex; align-items: center; justify-content: center; overflow: hidden;
+                                transition: 0.25s; padding: 0; background: none; border: none;"
+                                onmouseover="this.style.transform='scale(1.15)'; this.querySelector('.tooltip-thm').style.opacity='1'; this.querySelector('.tooltip-thm').style.top='-2.4rem';"
+                                onmouseout="this.style.transform='scale(1)'; this.querySelector('.tooltip-thm').style.opacity='0'; this.querySelector('.tooltip-thm').style.top='-1.8rem';">
+
+                                <img src="/assect/dev/thmProfile.png" alt="TryHackMe Icon"
+                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.75rem;">
+                                <div
+                                    style="position: absolute; top: -2.5rem; left: 50%; transform: translateX(-50%); padding: 0.375rem 0.75rem; border-radius: 0.5rem; background: #0f172a; color: #fff; font-size: 0.75rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+                                    TryHackMe</div>
+                            </a>
+
+                        </div>
+
+                        <!-- View Full Profile Button -->
+                        <a href="/assect/dev/MyResume.pdf"
+                            style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.875rem 1.5rem; background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); color: #fff; text-decoration: none; border: none; border-radius: 0.75rem; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);"
+                            onmouseover="this.style.boxShadow='0 0 30px rgba(168, 85, 247, 0.6)'; this.style.transform='translateY(-2px)';"
+                            onmouseout="this.style.boxShadow='0 0 20px rgba(168, 85, 247, 0.4)'; this.style.transform='translateY(0)';">
+                            <i class="fas fa-user-astronaut"></i>
+                            View Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/about.js"></script>
+</body>
+
+</html>

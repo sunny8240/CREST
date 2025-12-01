@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Club - Contact Us</title>
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="resource.html" class="nav-link">Resources</a>
+            </div>
+
+            <!-- center large square logo -->
+            <div class="nav-center">
+                <a href="../index.html" aria-label="Home">
+                    <img src="../assect/logo.png" alt="CREST" class="nav-center-logo">
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="/pages/event/events.html" class="nav-link">Events</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="resource.html" class="mobile-link">Resources</a>
+            <a href="/pages/event/events.html" class="mobile-link">Events</a>
+            <a href="team.html" class="mobile-link">Team</a>
+            <a href="contact.html" class="mobile-link active">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-badge">Get in Touch</div>
+            <h1>Contact Us</h1>
+            <p>Have questions? We'd love to hear from you</p>
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="card" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.6) 100%);">
+                <div class="card-header">
+                    <div class="icon-box" style="background: linear-gradient(135deg, #7c3aed, #ec4899);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2>Send us a Message</h2>
+                </div>
+
+                <div id="contactForm">
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                style="width: 1.25rem; height: 1.25rem;">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div id="successMessage" class="success-message hidden">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Message Sent!</h3>
+                    <p>Thank you for reaching out. We'll get back to you soon.</p>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="info-cards">
+                <!-- Email Card -->
+                <div class="info-card email">
+                    <div class="card-header">
+                        <div class="icon-box purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Email Us</h3>
+                    </div>
+                    <p>For general inquiries and information</p>
+                    <a href="mailto:contact@crestclub.com">contact@crestclub.com</a><br>
+                    <a href="mailto:info@crestclub.com">info@crestclub.com</a>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="info-card phone">
+                    <div class="card-header">
+                        <div class="icon-box blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>Call Us</h3>
+                    </div>
+                    <p>Available Monday - Friday, 9AM - 5PM</p>
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+
+                <!-- Location Card -->
+                <div class="info-card location">
+                    <div class="card-header">
+                        <div class="icon-box green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Visit Us</h3>
+                    </div>
+                    <p>Find us on campus</p>
+                    <div class="address">
+                        Computer Science Department<br>
+                        Room 305, Building A<br>
+                        University Campus
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="social-section">
+            <h2>Connect With Us</h2>
+            <p>Follow us on social media for updates and cybersecurity tips</p>
+
+            <div class="social-links">
+                <a href="https://linkedin.com/company/crest-club" target="_blank" rel="noopener noreferrer"
+                    class="social-link linkedin">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/crest-club" target="_blank" rel="noopener noreferrer"
+                    class="social-link github">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+
+                <a href="https://twitter.com/crest_club" target="_blank" rel="noopener noreferrer"
+                    class="social-link twitter">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                        </path>
+                    </svg>
+                    <span>Twitter</span>
+                </a>
+
+                <a href="https://discord.gg/crest-club" target="_blank" rel="noopener noreferrer"
+                    class="social-link discord">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Discord</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How can I join the club?</h3>
+                    <p>You can join by filling out the contact form above or attending our next meeting. We welcome
+                        students of all skill levels!</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>When do you meet?</h3>
+                    <p>We have weekly meetings every Friday at 5 PM in Room 305. Check our Events page for special
+                        workshops and competitions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do I need prior experience?</h3>
+                    <p>Not at all! We offer training sessions for beginners and advanced workshops for experienced
+                        members.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is there a membership fee?</h3>
+                    <p>Membership is free for all students. We occasionally have paid workshops for specialized training
+                        and certifications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Form submission
+        const messageForm = document.getElementById('messageForm');
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        messageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show success message
+            contactForm.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                messageForm.reset();
+                successMessage.classList.add('hidden');
+                contactForm.classList.remove('hidden');
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>

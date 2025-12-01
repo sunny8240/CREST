@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREST - Cybersecurity Club</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="../index.html" class="nav-link active">Home</a>
+                <a href="/pages/about.html" class="nav-link">About</a>
+                <a href="/pages/resource.html" class="nav-link">Resources</a>
+            </div>
+
+            <div class="nav-center">
+                <a href="../index.html" aria-label="Home">
+                    <img src="../assect/logo.png" alt="CREAST" class="nav-center-logo">
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="/pages/event/events.html" class="nav-link">Events</a>
+                <a href="/pages/team.html" class="nav-link">Team</a>
+                <a href="/pages/contact.html" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/index.html" class="mobile-link active">Home</a>
+            <a href="/pages/about.html" class="mobile-link">About</a>
+            <a href="/pages/resource.html" class="mobile-link">Resources</a>
+            <a href="/pages/event/events.html" class="mobile-link">Events</a>
+            <a href="/pages/team.html" class="mobile-link">Team</a>
+            <a href="/pages/contact.html" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Interactive Grid Canvas -->
+        <canvas id="gridCanvas" class="grid-canvas"></canvas>
+
+        <!-- Floating Icons -->
+        <div class="floating-icons">
+            <div class="floating-icon" style="left: 10%; top: 20%; animation-delay: 0s;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+            </div>
+            <div class="floating-icon" style="left: 85%; top: 15%; animation-delay: 0.5s;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+            </div>
+            <div class="floating-icon" style="left: 15%; top: 70%; animation-delay: 1s;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+            </div>
+            <div class="floating-icon" style="left: 80%; top: 65%; animation-delay: 1.5s;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Gradient Overlays -->
+        <div class="gradient-overlay-1"></div>
+        <div class="gradient-overlay-2"></div>
+        <div class="gradient-overlay-3"></div>
+
+        <!-- Badge at Top Center -->
+        <div class="badge-container">
+            <div class="badge">
+                <div class="badge-glow"></div>
+                <div class="badge-content">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        class="badge-icon">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    <span>CREST Cybersecurity Club</span>
+                    <div class="status-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="hero-content">
+            <div class="content-wrapper">
+                <!-- Typing Text -->
+                <div class="typing-container" id="typingContainer">
+                    <div class="word-container">
+                        <div class="word-bar"></div>
+                        <div class="word-text gradient-1">
+                            <span id="word1"></span>
+                            <span class="cursor" id="cursor1"></span>
+                        </div>
+                    </div>
+                    <div class="word-container">
+                        <div class="word-bar"></div>
+                        <div class="word-text gradient-2">
+                            <span id="word2"></span>
+                            <span class="cursor hidden" id="cursor2"></span>
+                        </div>
+                    </div>
+                    <div class="word-container">
+                        <div class="word-bar"></div>
+                        <div class="word-text gradient-3">
+                            <span id="word3"></span>
+                            <span class="cursor hidden" id="cursor3"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <p class="description">
+                    Master the art of cybersecurity with hands-on training, real-world challenges,
+                    and a community of passionate ethical hackers. Join us to sharpen your skills and
+                    defend the digital frontier.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="cta-buttons">
+                    <button class="btn-primary">
+                        <a href="/pages/join.html" target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none; color: white;">
+                            Join the Club</a>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+
+                    </button>
+                    <button class="btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <a href="/pages/event/events.html" style="text-decoration: none; color: rgb(130, 218, 247);">
+                            Start Hacking
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Cards at Bottom Center -->
+        <div class="stats-container">
+            <div class="stats-grid">
+                <!-- Card 1 -->
+                <div class="stat-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-overlay"></div>
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="scan-line"></div>
+
+                        <div class="card-inner">
+                            <div class="icon-container">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="card-icon">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div class="card-value">500+</div>
+                            <div class="card-label">Active Members</div>
+                            <div class="accent-line">
+                                <div class="accent-line-animated"></div>
+                            </div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="stat-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-overlay"></div>
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="scan-line"></div>
+
+                        <div class="card-inner">
+                            <div class="icon-container">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="card-icon">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <div class="card-value">100+</div>
+                            <div class="card-label">CTF Challenges</div>
+                            <div class="accent-line">
+                                <div class="accent-line-animated"></div>
+                            </div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="stat-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-overlay"></div>
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="scan-line"></div>
+
+                        <div class="card-inner">
+                            <div class="icon-container">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="card-icon">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <div class="card-value">50+</div>
+                            <div class="card-label">Workshops</div>
+                            <div class="accent-line">
+                                <div class="accent-line-animated"></div>
+                            </div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="stat-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-overlay"></div>
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="scan-line"></div>
+
+                        <div class="card-inner">
+                            <div class="icon-container">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" class="card-icon">
+                                    <polyline points="4 17 10 11 4 5"></polyline>
+                                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                                </svg>
+                            </div>
+                            <div class="card-value">24/7</div>
+                            <div class="card-label">Lab Access</div>
+                            <div class="accent-line">
+                                <div class="accent-line-animated"></div>
+                            </div>
+                            <div class="corner-dot top-right"></div>
+                            <div class="corner-dot bottom-left"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <!-- <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div> -->
+    </section>
+
+    <script src="/js/home.js"></script>
+</body>
+
+</html>
