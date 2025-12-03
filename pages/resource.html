@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CREST - Hacktivities</title>
+    <meta name="description"
+        content="CREST Cybersecurity Resources - Access tutorials, guides, tools, and learning materials for cybersecurity education.">
+    <meta name="keywords"
+        content="cybersecurity resources, tutorials, guides, learning materials, security tools, ethical hacking">
+    <meta name="author" content="CREST Cybersecurity Club">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Resources - CREST Cybersecurity Club">
+    <meta property="og:description"
+        content="Access comprehensive cybersecurity learning resources, tutorials, and guides.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crestclub.vercel.app/pages/resource.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CREST Resources">
+    <link rel="icon" type="image/x-icon" href="/assect/logo.png">
+    <meta name="twitter:description" content="Cybersecurity learning resources and guides">
+    <link rel="canonical" href="https://crestclub.vercel.app/pages/resource.html">
+    <title>Resources - CREST Cybersecurity Club | Learning Materials & Guides</title>
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/resource.css">
 </head>
+
 <body>
-    <!-- Navbar (matches Team page) -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-left">
@@ -16,7 +34,6 @@
                 <a href="/pages/resource.html" class="nav-link active">Resources</a>
             </div>
 
-            <!-- Center large square logo -->
             <div class="nav-center">
                 <a href="/index.html" aria-label="Home">
                     <img src="/assect/logo.png" alt="CREST" class="nav-center-logo">
@@ -44,44 +61,40 @@
         </div>
     </nav>
 
-    <!-- Background Effects -->
     <div class="bg-effects">
         <div class="glow-orb glow-orb-1"></div>
         <div class="glow-orb glow-orb-2"></div>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <h1 class="hero-title">
                 <span class="gradient-text">Hacktivities</span>
             </h1>
             <p class="hero-subtitle">Search through our collection of rooms, challenges and learning paths</p>
-            
-            <!-- Search Bar -->
+
             <div class="search-wrapper">
                 <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 <input type="text" id="searchInput" class="search-input" placeholder="Search for rooms...">
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
     <div class="main-container">
         <div class="container">
             <div class="content-wrapper">
-                <!-- Sidebar Filters -->
                 <aside class="sidebar">
                     <div class="filter-header">
                         <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                         </svg>
                         <h3>Filters</h3>
                     </div>
 
-                    <!-- Difficulty Filter -->
                     <div class="filter-section">
                         <h4 class="filter-title">DIFFICULTY</h4>
                         <div class="filter-options">
@@ -112,7 +125,6 @@
                         </div>
                     </div>
 
-                    <!-- Type Filter -->
                     <div class="filter-section">
                         <h4 class="filter-title">TYPE</h4>
                         <div class="filter-options">
@@ -129,60 +141,64 @@
                         </div>
                     </div>
 
-                    <!-- Clear Filters Button -->
                     <button class="clear-filters-btn hidden" id="clearFiltersBtn">Clear Filters</button>
                 </aside>
 
-                <!-- Main Content Area -->
                 <main class="main-content">
-                    <!-- Category Filter -->
                     <div class="category-filter">
                         <button class="category-btn active" data-category="all">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
                             <span>All Rooms</span>
                         </button>
                         <button class="category-btn" data-category="web">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                             </svg>
                             <span>Web</span>
                         </button>
                         <button class="category-btn" data-category="crypto">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                             </svg>
                             <span>Crypto</span>
                         </button>
                         <button class="category-btn" data-category="linux">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                             <span>Linux</span>
                         </button>
                         <button class="category-btn" data-category="forensics">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
                             <span>Forensics</span>
                         </button>
                         <button class="category-btn" data-category="network">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
                             </svg>
                             <span>Network</span>
                         </button>
                         <button class="category-btn" data-category="exploit">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                             </svg>
                             <span>Exploitation</span>
                         </button>
                     </div>
 
-                    <!-- Learning Paths -->
                     <section class="section">
                         <div class="section-header">
                             <h2>Learning Paths</h2>
@@ -191,7 +207,6 @@
                         <div class="learning-paths-grid" id="learningPaths"></div>
                     </section>
 
-                    <!-- Rooms Grid -->
                     <section class="section">
                         <div class="section-header">
                             <h2>Rooms</h2>
@@ -201,7 +216,8 @@
                         <div class="no-results hidden" id="noResults">
                             <div class="no-results-icon">
                                 <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                             </div>
                             <h3>No rooms found</h3>
@@ -213,14 +229,14 @@
         </div>
     </div>
 
-    <!-- Stats Section -->
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon" style="background-color: rgba(168, 85, 247, 0.2);">
                         <svg width="24" height="24" fill="none" stroke="#a855f7" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                     </div>
                     <div class="stat-value" style="color: #a855f7;">150+</div>
@@ -229,7 +245,8 @@
                 <div class="stat-card">
                     <div class="stat-icon" style="background-color: rgba(236, 72, 153, 0.2);">
                         <svg width="24" height="24" fill="none" stroke="#ec4899" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
                     </div>
                     <div class="stat-value" style="color: #ec4899;">2,500+</div>
@@ -238,7 +255,8 @@
                 <div class="stat-card">
                     <div class="stat-icon" style="background-color: rgba(6, 182, 212, 0.2);">
                         <svg width="24" height="24" fill="none" stroke="#06b6d4" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                         </svg>
                     </div>
                     <div class="stat-value" style="color: #06b6d4;">50+</div>
@@ -247,7 +265,8 @@
                 <div class="stat-card">
                     <div class="stat-icon" style="background-color: rgba(34, 197, 94, 0.2);">
                         <svg width="24" height="24" fill="none" stroke="#22c55e" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                         </svg>
                     </div>
                     <div class="stat-value" style="color: #22c55e;">1,200+</div>
@@ -255,20 +274,22 @@
                 </div>
             </div>
 
-            <!-- CTA Card -->
             <div class="cta-card">
                 <div class="cta-card-inner">
                     <h2 class="cta-title gradient-text">Join CREST Today</h2>
-                    <p class="cta-description">Get access to exclusive rooms, challenges, and learning paths. Build your cybersecurity skills with hands-on practice.</p>
+                    <p class="cta-description">Get access to exclusive rooms, challenges, and learning paths. Build your
+                        cybersecurity skills with hands-on practice.</p>
                     <div class="cta-buttons">
                         <button class="btn btn-primary">
-                            <span><a href="/pages/event/event-registration.html" target="_blank" rel="noopener noreferrer"
-                            style="text-decoration: none; color: white;">Get Started</a></span>
+                            <span><a href="/pages/event/event-registration.html" target="_blank"
+                                    rel="noopener noreferrer" style="text-decoration: none; color: white;">Get
+                                    Started</a></span>
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </button>
-                        <button class="btn btn-secondary">
+                        <button onclick="alert('Sorry, This is Not Available Now .')" class="btn btn-secondary">
                             <span>Browse Rooms</span>
                         </button>
                     </div>
@@ -279,4 +300,5 @@
 
     <script src="/js/resource.js"></script>
 </body>
+
 </html>

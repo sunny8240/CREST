@@ -1,199 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTF Registration - Cybersecurity Club</title>
+    <link rel="icon" type="image/x-icon" href="/assect/logo.png">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="registration-styles.css">
-    <style>
+    <!-- <style>
         :root {
             --accent: #00ffd1;
             --text-primary: #e2e8f0;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
-            --border: rgba(71, 85, 105, 0.2);
+            --border: rgba(71, 85, 105, 0.2); 
         }
-
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: linear-gradient(180deg, rgba(2,6,12,0.6), rgba(2,6,12,0.25));
-            backdrop-filter: blur(8px) saturate(1.05);
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-        }
-
-        .nav-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            height: 64px;
-        }
-
-        .nav-left, .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            position: absolute;
-        }
-
-        .nav-left {
-            left: 1rem;
-        }
-
-        .nav-right {
-            right: 1rem;
-        }
-
-        .nav-center {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: auto;
-        }
-
-        .nav-center a {
-            pointer-events: auto;
-            text-decoration: none;
-        }
-
-        .nav-center-logo {
-            width: 150px;
-            height: 150px;
-            display: inline-block;
-            object-fit: cover;
-            border-radius: 8px;
-            padding-top: 25px;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-center-logo:hover {
-            transform: scale(1.1);
-        }
-
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
-            padding: 0.5rem 0.75rem;
-            border-bottom: 2px solid transparent;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-
-        .nav-link.active {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-            font-weight: 600;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            position: absolute;
-            right: 1rem;
-            color: var(--text-secondary);
-        }
-
-        .hamburger {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text-secondary);
-            position: relative;
-            transition: background 0.3s;
-        }
-
-        .hamburger::before,
-        .hamburger::after {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 2px;
-            background: var(--text-secondary);
-            transition: transform 0.3s;
-        }
-
-        .hamburger::before {
-            top: -8px;
-        }
-
-        .hamburger::after {
-            top: 8px;
-        }
-
-        .mobile-menu {
-            display: none;
-            background: rgba(15, 23, 42, 0.98);
-            border-top: 1px solid var(--border);
-            padding: 1rem;
-            position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-            z-index: 999;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-link {
-            display: block;
-            color: var(--text-secondary);
-            text-decoration: none;
-            padding: 0.75rem 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .mobile-link:hover, .mobile-link.active {
-            color: var(--accent);
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                max-width: 100%;
-            }
-
-            .nav-left,
-            .nav-right {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-                z-index: 1001;
-            }
-
-            .nav-center-logo {
-                width: 80px;
-                height: 80px;
-                padding-top: 10px;
-            }
-        }
-    </style>
+    </style> -->
 </head>
+
 <body>
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-left">
@@ -215,7 +42,7 @@
                 <span class="hamburger"></span>
             </button>
         </div>
-        <div class="mobile-menu hidden" id="mobileMenu">
+        <div class="mobile-menu" id="mobileMenu">
             <a href="/index.html" class="mobile-link">Home</a>
             <a href="/pages/about.html" class="mobile-link">About</a>
             <a href="/pages/resource.html" class="mobile-link">Resources</a>
@@ -225,7 +52,6 @@
         </div>
     </nav>
 
-    <!-- Registration Header -->
     <section class="registration-header">
         <div class="container">
             <div class="header-content">
@@ -259,7 +85,6 @@
         </div>
     </section>
 
-    <!-- Registration Progress -->
     <section class="registration-progress-section">
         <div class="container">
             <div class="progress-container">
@@ -285,21 +110,19 @@
         </div>
     </section>
 
-    <!-- Registration Form -->
     <section class="registration-form-section">
         <div class="container">
             <div class="registration-layout">
-                <!-- Main Form -->
                 <div class="registration-main">
                     <form id="ctfRegistrationForm" class="registration-form">
-                        <!-- Step 1: Team Information -->
                         <div class="form-step active" id="step1">
                             <h2>Team Information</h2>
                             <p class="form-subtitle">Tell us about your team</p>
 
                             <div class="form-group">
                                 <label for="teamName">Team Name *</label>
-                                <input type="text" id="teamName" name="teamName" required placeholder="Enter your team name">
+                                <input type="text" id="teamName" name="teamName" required
+                                    placeholder="Enter your team name">
                                 <small>Choose a unique and creative team name</small>
                             </div>
 
@@ -318,7 +141,8 @@
 
                             <div class="form-group">
                                 <label for="institution">Institution/Organization *</label>
-                                <input type="text" id="institution" name="institution" required placeholder="Enter your institution name">
+                                <input type="text" id="institution" name="institution" required
+                                    placeholder="Enter your institution name">
                             </div>
 
                             <div class="form-group">
@@ -336,38 +160,40 @@
                             </div>
                         </div>
 
-                        <!-- Step 2: Team Members -->
                         <div class="form-step" id="step2">
                             <h2>Team Members</h2>
                             <p class="form-subtitle">Add your team members' information</p>
 
                             <div id="membersContainer">
-                                <!-- Captain (Member 1) -->
                                 <div class="member-card">
                                     <div class="member-header">
                                         <h4>Team Captain (Member 1)</h4>
                                         <span class="required-badge">Required</span>
                                     </div>
-                                    
+
                                     <div class="form-row">
                                         <div class="form-group">
                                             <label for="member1Name">Full Name *</label>
-                                            <input type="text" id="member1Name" name="member1Name" required placeholder="Full name">
+                                            <input type="text" id="member1Name" name="member1Name" required
+                                                placeholder="Full name">
                                         </div>
                                         <div class="form-group">
                                             <label for="member1Email">Email *</label>
-                                            <input type="email" id="member1Email" name="member1Email" required placeholder="email@example.com">
+                                            <input type="email" id="member1Email" name="member1Email" required
+                                                placeholder="email@example.com">
                                         </div>
                                     </div>
 
                                     <div class="form-row">
                                         <div class="form-group">
                                             <label for="member1Phone">Phone Number *</label>
-                                            <input type="tel" id="member1Phone" name="member1Phone" required placeholder="+1 (555) 000-0000">
+                                            <input type="tel" id="member1Phone" name="member1Phone" required
+                                                placeholder="+1 (555) 000-0000">
                                         </div>
                                         <div class="form-group">
                                             <label for="member1Discord">Discord Username</label>
-                                            <input type="text" id="member1Discord" name="member1Discord" placeholder="username#0000">
+                                            <input type="text" id="member1Discord" name="member1Discord"
+                                                placeholder="username#0000">
                                         </div>
                                     </div>
 
@@ -386,16 +212,16 @@
                                     </div>
                                 </div>
 
-                                <!-- Additional members will be added here dynamically -->
+                                <!--if want, Additional members will be added here dynamically -->
                             </div>
 
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" onclick="previousStep(2)">Previous</button>
+                                <button type="button" class="btn btn-secondary"
+                                    onclick="previousStep(2)">Previous</button>
                                 <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next Step</button>
                             </div>
                         </div>
 
-                        <!-- Step 3: Confirmation -->
                         <div class="form-step" id="step3">
                             <h2>Review & Confirm</h2>
                             <p class="form-subtitle">Please review your information before submitting</p>
@@ -413,25 +239,27 @@
                             <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-                                    <span>I agree to the <a href="#">terms and conditions</a> and <a href="#">code of conduct</a></span>
+                                    <span>I agree to the <a href="#">terms and conditions</a> and <a href="#">code of
+                                            conduct</a></span>
                                 </label>
                             </div>
 
                             <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="agreeRules" name="agreeRules" required>
-                                    <span>I understand and agree to follow the CTF rules and ethical hacking guidelines</span>
+                                    <span>I understand and agree to follow the CTF rules and ethical hacking
+                                        guidelines</span>
                                 </label>
                             </div>
 
                             <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" onclick="previousStep(3)">Previous</button>
+                                <button type="button" class="btn btn-secondary"
+                                    onclick="previousStep(3)">Previous</button>
                                 <button type="submit" class="btn btn-primary btn-large">Complete Registration</button>
                             </div>
                         </div>
                     </form>
 
-                    <!-- Success Message (Hidden initially) -->
                     <div id="successMessage" class="success-message" style="display: none;">
                         <div class="success-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -449,7 +277,6 @@
                     </div>
                 </div>
 
-                <!-- Sidebar -->
                 <div class="registration-sidebar">
                     <div class="sidebar-card">
                         <h3>Event Details</h3>
@@ -497,7 +324,9 @@
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
                                 </svg>
                                 Cryptography
                             </li>
@@ -559,7 +388,7 @@
                     <div class="sidebar-card help-card">
                         <h3>Need Help?</h3>
                         <p>Contact us if you have any questions about registration</p>
-                        <a href="contact.html" class="btn btn-secondary btn-small">Contact Support</a>
+                        <a href="/pages/contact.html" class="btn btn-secondary btn-small">Contact Support</a>
                     </div>
                 </div>
             </div>
@@ -602,27 +431,19 @@
         </div>
     </footer> -->
 
-    <script src="script.js"></script>
     <script src="ctf-registration-script.js"></script>
 
     <script>
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
         if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuBtn.addEventListener('click', function () {
                 mobileMenu.classList.toggle('active');
             });
         }
-
-        // Close menu when a link is clicked
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-            });
-        });
     </script>
+
 </body>
+
 </html>

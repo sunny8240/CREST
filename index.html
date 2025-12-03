@@ -4,8 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CREST - Cybersecurity Club</title>
+    <meta name="description"
+        content="CREST - Premier Cybersecurity Club. Learn hacking, CTF competitions, cybersecurity workshops, and join our community of ethical hackers.">
+    <meta name="keywords"
+        content="cybersecurity, CTF, hacking, security club, ethical hacking, workshops, cybersecurity education">
+    <meta name="author" content="CREST Cybersecurity Club">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="CREST - Cybersecurity Club">
+    <meta property="og:description"
+        content="Join CREST Cybersecurity Club - Learn hacking, participate in CTF competitions, and master cybersecurity.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crestclub.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CREST - Cybersecurity Club">
+    <meta name="twitter:description" content="Join CREST for cybersecurity learning and CTF competitions">
+    <link rel="canonical" href="https://crestclub.vercel.app">
+    <link rel="icon" type="image/x-icon" href="/assect/logo.png">
+    <title>CREST - Cybersecurity Club | Learn Ethical Hacking & Cybersecurity</title>
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/home.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CREST Cybersecurity Club",
+      "url": "https://crestclub.vercel.app",
+      "logo": "https://crestclub.vercel.app/assect/logo.png",
+      "description": "Premier Cybersecurity Club offering CTF competitions, workshops, and cybersecurity education",
+      "sameAs": [
+        "https://twitter.com/your-handle",
+        "https://linkedin.com/company/your-company"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "@language": "en-US",
+        "contactType": "General",
+        "email": "contact@crestclub.vercel.app"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -42,12 +80,9 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero-section">
-        <!-- Interactive Grid Canvas -->
         <canvas id="gridCanvas" class="grid-canvas"></canvas>
 
-        <!-- Floating Icons -->
         <div class="floating-icons">
             <div class="floating-icon" style="left: 10%; top: 20%; animation-delay: 0s;">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -74,12 +109,10 @@
             </div>
         </div>
 
-        <!-- Gradient Overlays -->
         <div class="gradient-overlay-1"></div>
         <div class="gradient-overlay-2"></div>
         <div class="gradient-overlay-3"></div>
 
-        <!-- Badge at Top Center -->
         <div class="badge-container">
             <div class="badge">
                 <div class="badge-glow"></div>
@@ -94,42 +127,38 @@
             </div>
         </div>
 
-        <!-- Main Content -->
         <div class="hero-content">
             <div class="content-wrapper">
-                <!-- Typing Text -->
                 <div class="typing-container" id="typingContainer">
                     <div class="word-container">
                         <div class="word-bar"></div>
-                        <div class="word-text gradient-1">
+                        <div class="word-text gradient-1" id="wordText1">
                             <span id="word1"></span>
                             <span class="cursor" id="cursor1"></span>
                         </div>
                     </div>
                     <div class="word-container">
                         <div class="word-bar"></div>
-                        <div class="word-text gradient-2">
+                        <div class="word-text gradient-2" id="wordText2">
                             <span id="word2"></span>
                             <span class="cursor hidden" id="cursor2"></span>
                         </div>
                     </div>
                     <div class="word-container">
                         <div class="word-bar"></div>
-                        <div class="word-text gradient-3">
+                        <div class="word-text gradient-3" id="wordText3">
                             <span id="word3"></span>
                             <span class="cursor hidden" id="cursor3"></span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Description -->
                 <p class="description">
                     Master the art of cybersecurity with hands-on training, real-world challenges,
                     and a community of passionate ethical hackers. Join us to sharpen your skills and
                     defend the digital frontier.
                 </p>
 
-                <!-- CTA Buttons -->
                 <div class="cta-buttons">
                     <button class="btn-primary">
                         <a href="/pages/join.html" target="_blank" rel="noopener noreferrer"
@@ -155,10 +184,8 @@
             </div>
         </div>
 
-        <!-- Stats Cards at Bottom Center -->
         <div class="stats-container">
             <div class="stats-grid">
-                <!-- Card 1 -->
                 <div class="stat-card">
                     <div class="card-glow"></div>
                     <div class="card-content">
@@ -185,7 +212,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="stat-card">
                     <div class="card-glow"></div>
                     <div class="card-content">
@@ -213,7 +239,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="stat-card">
                     <div class="card-glow"></div>
                     <div class="card-content">
@@ -241,7 +266,6 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="stat-card">
                     <div class="card-glow"></div>
                     <div class="card-content">
@@ -271,10 +295,6 @@
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <!-- <div class="scroll-indicator">
-            <div class="scroll-dot"></div>
-        </div> -->
     </section>
 
     <script src="/js/home.js"></script>

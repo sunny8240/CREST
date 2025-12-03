@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - Cybersecurity Club</title>
+    <meta name="description"
+        content="CREST Events - CTF competitions, cybersecurity workshops, hackathons, and networking events for security enthusiasts.">
+    <meta name="keywords"
+        content="cybersecurity events, CTF competition, workshops, hackathon, security talks, networking">
+    <meta name="author" content="CREST Cybersecurity Club">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Events - CREST Cybersecurity Club">
+    <meta property="og:description"
+        content="Join CREST Events - CTF competitions, workshops, and hackathons for cybersecurity enthusiasts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crestclub.vercel.app/pages/event/events.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CREST Events">
+    <link rel="icon" type="image/x-icon" href="/assect/logo.png">
+    <meta name="twitter:description" content="Cybersecurity events and competitions">
+    <link rel="canonical" href="https://crestclub.vercel.app/pages/event/events.html">
+    <title>Events - CREST Cybersecurity Club | CTF & Workshops</title>
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="events-styles.css">
     <style>
@@ -14,186 +32,10 @@
             --text-muted: #64748b;
             --border: rgba(71, 85, 105, 0.2);
         }
-
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: linear-gradient(180deg, rgba(2,6,12,0.6), rgba(2,6,12,0.25));
-            backdrop-filter: blur(8px) saturate(1.05);
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-        }
-
-        .nav-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            height: 64px;
-        }
-
-        .nav-left, .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            position: absolute;
-        }
-
-        .nav-left {
-            left: 1rem;
-        }
-
-        .nav-right {
-            right: 1rem;
-        }
-
-        .nav-center {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: auto;
-        }
-
-        .nav-center a {
-            pointer-events: auto;
-            text-decoration: none;
-        }
-
-        .nav-center-logo {
-            width: 150px;
-            height: 150px;
-            display: inline-block;
-            object-fit: cover;
-            border-radius: 8px;
-            padding-top: 25px;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-center-logo:hover {
-            transform: scale(1.1);
-        }
-
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
-            padding: 0.5rem 0.75rem;
-            border-bottom: 2px solid transparent;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-
-        .nav-link.active {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-            font-weight: 600;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            position: absolute;
-            right: 1rem;
-            color: var(--text-secondary);
-        }
-
-        .hamburger {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text-secondary);
-            position: relative;
-            transition: background 0.3s;
-        }
-
-        .hamburger::before,
-        .hamburger::after {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 2px;
-            background: var(--text-secondary);
-            transition: transform 0.3s;
-        }
-
-        .hamburger::before {
-            top: -8px;
-        }
-
-        .hamburger::after {
-            top: 8px;
-        }
-
-        .mobile-menu {
-            display: none;
-            background: rgba(15, 23, 42, 0.98);
-            border-top: 1px solid var(--border);
-            padding: 1rem;
-            position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-            z-index: 999;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-link {
-            display: block;
-            color: var(--text-secondary);
-            text-decoration: none;
-            padding: 0.75rem 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .mobile-link:hover, .mobile-link.active {
-            color: var(--accent);
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                max-width: 100%;
-            }
-
-            .nav-left,
-            .nav-right {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-                z-index: 1001;
-            }
-
-            .nav-center-logo {
-                width: 80px;
-                height: 80px;
-                padding-top: 10px;
-            }
-        }
     </style>
 </head>
+
 <body>
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-left">
@@ -215,7 +57,7 @@
                 <span class="hamburger"></span>
             </button>
         </div>
-        <div class="mobile-menu hidden" id="mobileMenu">
+        <div class="mobile-menu" id="mobileMenu">
             <a href="/index.html" class="mobile-link">Home</a>
             <a href="/pages/about.html" class="mobile-link">About</a>
             <a href="/pages/resource.html" class="mobile-link">Resources</a>
@@ -225,7 +67,6 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
             <h1>Events & Activities</h1>
@@ -233,7 +74,6 @@
         </div>
     </section>
 
-    <!-- Quick Stats -->
     <section class="events-stats">
         <div class="container">
             <div class="stats-grid">
@@ -268,7 +108,9 @@
                 <div class="stat-card">
                     <div class="stat-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
                         </svg>
                     </div>
                     <div class="stat-content">
@@ -291,7 +133,6 @@
         </div>
     </section>
 
-    <!-- Event Categories -->
     <section class="event-categories">
         <div class="container">
             <div class="category-tabs">
@@ -302,10 +143,14 @@
                 <button class="category-tab" data-category="talks">Guest Talks</button>
                 <button class="category-tab" data-category="hackathons">Hackathons</button>
             </div>
+            <div class="category-controls" style="margin-top:1rem; display:flex; justify-content:center; gap:1rem;">
+                <input id="eventSearch" type="search" placeholder="Search events by title or description"
+                    aria-label="Search events"
+                    style="padding:0.5rem 0.75rem; border-radius:8px; border:1px solid rgba(148,163,184,0.15); width:320px; background:rgba(15,23,42,0.6); color:#fff;">
+            </div>
         </div>
     </section>
 
-    <!-- Featured CTF Event -->
     <section class="featured-event">
         <div class="container">
             <div class="featured-card">
@@ -320,7 +165,9 @@
                             CTF Championship 2024
                         </div>
                         <h2>Annual Capture The Flag Competition</h2>
-                        <p>Join the biggest cybersecurity competition of the year! 24-hour intense CTF with challenges across Web, Crypto, Forensics, Reversing, PWN, and OSINT. Win amazing prizes and recognition!</p>
+                        <p>Join the biggest cybersecurity competition of the year! 24-hour intense CTF with challenges
+                            across Web, Crypto, Forensics, Reversing, PWN, and OSINT. Win amazing prizes and
+                            recognition!</p>
                         <div class="featured-meta">
                             <div class="meta-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -350,7 +197,8 @@
                         </div>
                     </div>
                     <div class="featured-image">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop" alt="CTF Competition">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop"
+                            alt="CTF Competition">
                         <div class="featured-overlay">
                             <div class="countdown" id="ctfCountdown">
                                 <div class="countdown-item">
@@ -376,16 +224,14 @@
             </div>
         </div>
     </section>
-
-    <!-- Events Grid -->
     <section class="events-list-section">
         <div class="container">
             <h2 class="section-title">All Events</h2>
             <div class="events-grid" id="eventsGrid">
-                <!-- CTF Events -->
                 <div class="event-card-detailed" data-category="upcoming ctf">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="CTF Competition">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop"
+                            alt="CTF Competition">
                         <div class="event-category-badge ctf-badge">CTF</div>
                     </div>
                     <div class="event-details">
@@ -395,24 +241,28 @@
                         </div>
                         <div class="event-info">
                             <h3>Annual CTF Championship</h3>
-                            <p>24-hour Capture The Flag competition with challenges across all security domains. Prizes worth $2000!</p>
+                            <p>24-hour Capture The Flag competition with challenges across all security domains. Prizes
+                                worth $2000!</p>
                             <div class="event-meta-list">
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polyline points="12 6 12 12 16 14"></polyline>
                                     </svg>
                                     <span>9:00 AM - 9:00 PM (Next Day)</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
                                     <span>Online Platform</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="9" cy="7" r="4"></circle>
                                     </svg>
@@ -424,10 +274,10 @@
                     </div>
                 </div>
 
-                <!-- Workshop Events -->
                 <div class="event-card-detailed" data-category="upcoming workshops">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=600&h=400&fit=crop" alt="Web Security Workshop">
+                        <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=600&h=400&fit=crop"
+                            alt="Web Security Workshop">
                         <div class="event-category-badge workshop-badge">Workshop</div>
                     </div>
                     <div class="event-details">
@@ -437,31 +287,36 @@
                         </div>
                         <div class="event-info">
                             <h3>Web Security Workshop</h3>
-                            <p>Deep dive into common web vulnerabilities including XSS, CSRF, SQL Injection, and secure coding practices.</p>
+                            <p>Deep dive into common web vulnerabilities including XSS, CSRF, SQL Injection, and secure
+                                coding practices.</p>
                             <div class="event-meta-list">
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polyline points="12 6 12 12 16 14"></polyline>
                                     </svg>
                                     <span>6:00 PM - 8:00 PM</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
                                     <span>Lab 301, CS Building</span>
                                 </div>
                             </div>
-                            <a href="event-registration.html?event=web-security" class="btn btn-primary btn-small">Register Now</a>
+                            <a href="event-registration.html?event=web-security"
+                                class="btn btn-primary btn-small">Register Now</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="event-card-detailed" data-category="upcoming workshops">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop" alt="Penetration Testing">
+                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop"
+                            alt="Penetration Testing">
                         <div class="event-category-badge workshop-badge">Workshop</div>
                     </div>
                     <div class="event-details">
@@ -471,31 +326,36 @@
                         </div>
                         <div class="event-info">
                             <h3>Penetration Testing Basics</h3>
-                            <p>Introduction to penetration testing methodologies, tools like Metasploit, Burp Suite, and hands-on labs.</p>
+                            <p>Introduction to penetration testing methodologies, tools like Metasploit, Burp Suite, and
+                                hands-on labs.</p>
                             <div class="event-meta-list">
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polyline points="12 6 12 12 16 14"></polyline>
                                     </svg>
                                     <span>2:00 PM - 5:00 PM</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
                                     <span>Security Lab 205</span>
                                 </div>
                             </div>
-                            <a href="event-registration.html?event=penetration-testing" class="btn btn-primary btn-small">Register Now</a>
+                            <a href="event-registration.html?event=penetration-testing"
+                                class="btn btn-primary btn-small">Register Now</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="event-card-detailed" data-category="upcoming workshops">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop" alt="Cryptography">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop"
+                            alt="Cryptography">
                         <div class="event-category-badge workshop-badge">Workshop</div>
                     </div>
                     <div class="event-details">
@@ -505,32 +365,36 @@
                         </div>
                         <div class="event-info">
                             <h3>Cryptography & Encryption</h3>
-                            <p>Explore symmetric and asymmetric encryption, hashing algorithms, digital signatures, and cryptographic protocols.</p>
+                            <p>Explore symmetric and asymmetric encryption, hashing algorithms, digital signatures, and
+                                cryptographic protocols.</p>
                             <div class="event-meta-list">
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polyline points="12 6 12 12 16 14"></polyline>
                                     </svg>
                                     <span>4:00 PM - 6:00 PM</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
                                     <span>Room 310</span>
                                 </div>
                             </div>
-                            <a href="event-registration.html?event=cryptography" class="btn btn-primary btn-small">Register Now</a>
+                            <a href="event-registration.html?event=cryptography"
+                                class="btn btn-primary btn-small">Register Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Guest Talks -->
                 <div class="event-card-detailed" data-category="upcoming talks">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=600&h=400&fit=crop" alt="Cloud Security Talk">
+                        <img src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=600&h=400&fit=crop"
+                            alt="Cloud Security Talk">
                         <div class="event-category-badge talk-badge">Guest Talk</div>
                     </div>
                     <div class="event-details">
@@ -540,32 +404,36 @@
                         </div>
                         <div class="event-info">
                             <h3>Cloud Security Masterclass</h3>
-                            <p>Guest speaker from Amazon AWS discussing cloud security architecture, best practices, and AWS certifications.</p>
+                            <p>Guest speaker from Amazon AWS discussing cloud security architecture, best practices, and
+                                AWS certifications.</p>
                             <div class="event-meta-list">
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polyline points="12 6 12 12 16 14"></polyline>
                                     </svg>
                                     <span>5:00 PM - 7:00 PM</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
                                     <span>Main Auditorium</span>
                                 </div>
                             </div>
-                            <a href="event-registration.html?event=cloud-security" class="btn btn-primary btn-small">Reserve Seat</a>
+                            <a href="event-registration.html?event=cloud-security"
+                                class="btn btn-primary btn-small">Reserve Seat</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hackathons -->
                 <div class="event-card-detailed" data-category="upcoming hackathons">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop" alt="Hackathon">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop"
+                            alt="Hackathon">
                         <div class="event-category-badge hackathon-badge">Hackathon</div>
                     </div>
                     <div class="event-details">
@@ -575,32 +443,36 @@
                         </div>
                         <div class="event-info">
                             <h3>Security Tools Hackathon</h3>
-                            <p>48-hour hackathon to build innovative security tools, vulnerability scanners, or automation solutions.</p>
+                            <p>48-hour hackathon to build innovative security tools, vulnerability scanners, or
+                                automation solutions.</p>
                             <div class="event-meta-list">
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polyline points="12 6 12 12 16 14"></polyline>
                                     </svg>
                                     <span>Fri 6PM - Sun 6PM</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
                                     <span>Innovation Hub</span>
                                 </div>
                             </div>
-                            <a href="event-registration.html?event=hackathon" class="btn btn-primary btn-small">Register Team</a>
+                            <a href="event-registration.html?event=hackathon" class="btn btn-primary btn-small">Register
+                                Team</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- More CTF Events -->
                 <div class="event-card-detailed" data-category="ctf">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop" alt="Beginner CTF">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop"
+                            alt="Beginner CTF">
                         <div class="event-category-badge ctf-badge">CTF</div>
                     </div>
                     <div class="event-details">
@@ -610,17 +482,20 @@
                         </div>
                         <div class="event-info">
                             <h3>Beginner-Friendly CTF</h3>
-                            <p>Perfect for newcomers! Learn CTF basics with guided challenges in web, forensics, and cryptography.</p>
+                            <p>Perfect for newcomers! Learn CTF basics with guided challenges in web, forensics, and
+                                cryptography.</p>
                             <div class="event-meta-list">
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polyline points="12 6 12 12 16 14"></polyline>
                                     </svg>
                                     <span>10:00 AM - 6:00 PM</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
@@ -634,7 +509,8 @@
 
                 <div class="event-card-detailed" data-category="ctf">
                     <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Jeopardy CTF">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+                            alt="Jeopardy CTF">
                         <div class="event-category-badge ctf-badge">CTF</div>
                     </div>
                     <div class="event-details">
@@ -644,17 +520,20 @@
                         </div>
                         <div class="event-info">
                             <h3>Spring Jeopardy CTF</h3>
-                            <p>Classic jeopardy-style CTF with categorized challenges. Test your skills across multiple domains!</p>
+                            <p>Classic jeopardy-style CTF with categorized challenges. Test your skills across multiple
+                                domains!</p>
                             <div class="event-meta-list">
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polyline points="12 6 12 12 16 14"></polyline>
                                     </svg>
                                     <span>12:00 PM - 8:00 PM</span>
                                 </div>
                                 <div class="meta-item">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
@@ -669,7 +548,6 @@
         </div>
     </section>
 
-    <!-- Event Gallery -->
     <section class="event-gallery-section">
         <div class="container">
             <div class="section-header">
@@ -687,84 +565,96 @@
 
             <div class="gallery-grid" id="galleryGrid">
                 <div class="gallery-item" data-category="ctf">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" alt="CTF Competition">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop"
+                        alt="CTF Competition">
                     <div class="gallery-overlay">
                         <h4>Annual CTF 2023</h4>
                         <p>200+ participants competing</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="workshops">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Workshop">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
+                        alt="Workshop">
                     <div class="gallery-overlay">
                         <h4>Web Security Workshop</h4>
                         <p>Hands-on learning session</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="talks">
-                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop" alt="Guest Talk">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop"
+                        alt="Guest Talk">
                     <div class="gallery-overlay">
                         <h4>Industry Expert Talk</h4>
                         <p>Keynote on AI Security</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="ctf">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" alt="Team CTF">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop"
+                        alt="Team CTF">
                     <div class="gallery-overlay">
                         <h4>Team CTF Challenge</h4>
                         <p>Collaborative problem solving</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="social">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop" alt="Networking">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop"
+                        alt="Networking">
                     <div class="gallery-overlay">
                         <h4>Networking Night</h4>
                         <p>Members connecting and sharing</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="workshops">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Hands-on Lab">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+                        alt="Hands-on Lab">
                     <div class="gallery-overlay">
                         <h4>Penetration Testing Lab</h4>
                         <p>Real-world scenarios</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="ctf">
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop" alt="Coding">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop"
+                        alt="Coding">
                     <div class="gallery-overlay">
                         <h4>Exploit Development</h4>
                         <p>Advanced CTF challenges</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="social">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop" alt="Award Ceremony">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
+                        alt="Award Ceremony">
                     <div class="gallery-overlay">
                         <h4>Award Ceremony</h4>
                         <p>Celebrating our winners</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="talks">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Conference">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
+                        alt="Conference">
                     <div class="gallery-overlay">
                         <h4>Security Conference</h4>
                         <p>Panel discussion</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="workshops">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop" alt="Training Session">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop"
+                        alt="Training Session">
                     <div class="gallery-overlay">
                         <h4>Forensics Training</h4>
                         <p>Digital evidence analysis</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="ctf">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" alt="Competition">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop"
+                        alt="Competition">
                     <div class="gallery-overlay">
                         <h4>Live Hacking Challenge</h4>
                         <p>Intense competition moment</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="social">
-                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=400&fit=crop" alt="Team Building">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=400&fit=crop"
+                        alt="Team Building">
                     <div class="gallery-overlay">
                         <h4>Team Building Event</h4>
                         <p>Fun and learning together</p>
@@ -848,27 +738,8 @@
         </div>
     </footer> -->
 
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
     <script src="events-script.js"></script>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.toggle('active');
-            });
-        }
-
-        // Close menu when a link is clicked
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-            });
-        });
-    </script>
 </body>
+
 </html>

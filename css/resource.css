@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --accent: #00ffd1;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: rgba(71, 85, 105, 0.2);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -18,68 +26,61 @@ body {
     padding-top: 64px;
 }
 
-:root {
-    --accent: #00ffd1;
-    --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --border: rgba(71, 85, 105, 0.2);
-}
-
-/* Background Effects */
-.bg-effects {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.glow-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    animation: pulse 4s ease-in-out infinite;
-}
-
-.glow-orb-1 {
-    top: 10%;
-    left: 10%;
-    width: 400px;
-    height: 400px;
-    background: rgba(168, 85, 247, 0.3);
-}
-
-.glow-orb-2 {
-    bottom: 10%;
-    right: 10%;
-    width: 500px;
-    height: 500px;
-    background: rgba(6, 182, 212, 0.3);
-    animation-delay: 2s;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 0.3;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(1.1);
-    }
-}
-
-/* Navbar - Matching Team Page */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: linear-gradient(180deg, rgba(2,6,12,0.6), rgba(2,6,12,0.25));
+    background: linear-gradient(180deg, rgba(2, 6, 12, 0.6), rgba(2, 6, 12, 0.25));
     backdrop-filter: blur(8px) saturate(1.05);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    transition: all 0.3s ease;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 60px 70px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 90px 10px, #eee, rgba(0, 0, 0, 0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 5s ease-in-out infinite;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.navbar.scrolled {
+    background: linear-gradient(180deg, rgba(2, 6, 12, 0.95), rgba(2, 6, 12, 0.7));
+    backdrop-filter: blur(12px) saturate(1.2);
+    box-shadow: 0 12px 40px rgba(0, 255, 209, 0.15);
+    border-bottom-color: rgba(0, 255, 209, 0.3);
+}
+
+.navbar.scrolled::before {
+    opacity: 0.6;
 }
 
 .nav-container {
@@ -91,6 +92,7 @@ body {
     justify-content: center;
     position: relative;
     height: 64px;
+    z-index: 2;
 }
 
 .nav-left,
@@ -99,6 +101,7 @@ body {
     align-items: center;
     gap: 1rem;
     position: absolute;
+    z-index: 3;
 }
 
 .nav-left {
@@ -115,34 +118,39 @@ body {
     align-items: center;
     justify-content: center;
     pointer-events: auto;
+    z-index: 3;
+}
+
+.nav-center::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: radial-gradient(circle, rgba(0, 255, 209, 0.4) 0%, rgba(139, 92, 246, 0.2) 50%, transparent 100%);
+    border-radius: 8px;
+    filter: blur(20px);
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.nav-center:hover::before {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 255, 209, 0.8) 0%, rgba(236, 72, 153, 0.4) 50%, transparent 100%);
+    box-shadow: 0 0 40px rgba(0, 255, 209, 0.6), 0 0 20px rgba(236, 72, 153, 0.4);
 }
 
 .nav-center a {
     pointer-events: auto;
     text-decoration: none;
+    position: relative;
+    z-index: 2;
 }
 
 .nav-center-logo {
     width: 150px;
     height: 150px;
-    display: inline-block;
-    object-fit: cover;
-    border-radius: 8px;
-    padding-top: 25px;
-    transition: transform 0.3s ease;
-}
 
-.nav-center-logo:hover {
-    transform: scale(1.1);
-}
-
-.nav-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-    padding: 0.5rem 0.75rem;
     border-bottom: 2px solid transparent;
     position: relative;
 }
@@ -247,7 +255,6 @@ body {
     }
 }
 
-/* Container */
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -256,7 +263,6 @@ body {
     z-index: 1;
 }
 
-/* Hero Section */
 .hero-section {
     position: relative;
     padding-top: 80px;
@@ -320,7 +326,6 @@ body {
     color: #6b7280;
 }
 
-/* Main Container */
 .main-container {
     position: relative;
     padding: 2rem 0;
@@ -331,7 +336,6 @@ body {
     gap: 1.5rem;
 }
 
-/* Sidebar */
 .sidebar {
     display: none;
     width: 260px;
@@ -434,13 +438,11 @@ body {
     display: none !important;
 }
 
-/* Main Content */
 .main-content {
     flex: 1;
     min-width: 0;
 }
 
-/* Category Filter */
 .category-filter {
     display: flex;
     gap: 0.5rem;
@@ -490,7 +492,6 @@ body {
     box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
 }
 
-/* Section */
 .section {
     margin-bottom: 3rem;
 }
@@ -524,7 +525,6 @@ body {
     font-size: 14px;
 }
 
-/* Learning Paths Grid */
 .learning-paths-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -919,7 +919,6 @@ body {
     font-size: 0.875rem;
 }
 
-/* No Results */
 .no-results {
     text-align: center;
     padding: 5rem 1rem;
@@ -949,7 +948,6 @@ body {
     color: #9ca3af;
 }
 
-/* Stats Section */
 .stats-section {
     position: relative;
     padding: 4rem 0;
@@ -995,7 +993,6 @@ body {
     font-size: 0.875rem;
 }
 
-/* CTA Card */
 .cta-card {
     position: relative;
     border-radius: 8px;
@@ -1065,16 +1062,15 @@ body {
     background: rgba(6, 182, 212, 0.1);
 }
 
-/* Responsive Design */
 @media (min-width: 640px) {
     .learning-paths-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .rooms-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .cta-buttons {
         flex-direction: row;
         justify-content: center;
@@ -1085,19 +1081,19 @@ body {
     .sidebar {
         display: block;
     }
-    
+
     .learning-paths-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .rooms-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .hero-title {
         font-size: 4rem;
     }
-    
+
     .stats-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -1107,11 +1103,11 @@ body {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .cta-title {
         font-size: 1.5rem;
     }
-    
+
     .nav-center-logo {
         width: 100px;
         height: 100px;

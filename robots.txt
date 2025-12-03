@@ -1,0 +1,19 @@
+# Robots.txt for CREST Cybersecurity Club
+# Allow all search engines to crawl and index the site
+
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+Disallow: /admin/
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# XML Sitemap
+Sitemap: https://crestclub.vercel.app/sitemap.xml

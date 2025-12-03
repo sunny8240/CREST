@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -29,96 +28,6 @@ body {
     fill: currentColor;
 }
 
-/* Navigation */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(100, 116, 139, 0.2);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-}
-
-.nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-logo {
-    width: 2rem;
-    height: 2rem;
-    stroke: #a855f7;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    align-items: center;
-}
-
-.nav-menu a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-    position: relative;
-}
-
-.nav-menu a:hover {
-    color: #a855f7;
-}
-
-.nav-menu a.active {
-    color: #a855f7;
-}
-
-.nav-menu a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(to right, #a855f7, #ec4899);
-    border-radius: 2px;
-}
-
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 0.4rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.nav-toggle span {
-    width: 1.5rem;
-    height: 2px;
-    background: #fff;
-    transition: all 0.3s;
-    border-radius: 2px;
-}
-
-/* Hero Section */
 .hero {
     position: relative;
     padding: 6rem 0;
@@ -132,7 +41,7 @@ body {
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at 20% 50%, rgba(147, 51, 234, 0.3), transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.2), transparent 50%);
+        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.2), transparent 50%);
     z-index: 0;
 }
 
@@ -222,7 +131,6 @@ body {
     font-size: 1rem;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
@@ -267,7 +175,6 @@ body {
     font-size: 0.875rem;
 }
 
-/* Section Styles */
 .features {
     padding: 5rem 0;
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.5), transparent);
@@ -337,7 +244,6 @@ body {
     line-height: 1.7;
 }
 
-/* Events Section */
 .upcoming-events {
     padding: 5rem 0;
 }
@@ -422,7 +328,6 @@ body {
     height: 1rem;
 }
 
-/* CTA Section */
 .cta-section {
     padding: 5rem 0;
     background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));
@@ -446,7 +351,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Footer */
 .footer {
     background: rgba(15, 23, 42, 0.95);
     border-top: 1px solid rgba(100, 116, 139, 0.2);
@@ -556,7 +460,6 @@ body {
     color: #a855f7;
 }
 
-/* Page Header */
 .page-header {
     padding: 6rem 0 4rem;
     text-align: center;
@@ -574,7 +477,6 @@ body {
     color: #94a3b8;
 }
 
-/* About Page Styles */
 .mission-section {
     padding: 5rem 0;
 }
@@ -642,7 +544,6 @@ body {
     display: block;
 }
 
-/* Values Section */
 .values-section {
     padding: 5rem 0;
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.5), transparent);
@@ -697,7 +598,6 @@ body {
     line-height: 1.7;
 }
 
-/* Timeline */
 .timeline-section {
     padding: 5rem 0;
 }
@@ -763,7 +663,6 @@ body {
     line-height: 1.7;
 }
 
-/* Achievements */
 .achievements-section {
     padding: 5rem 0;
     background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.5));
@@ -806,7 +705,6 @@ body {
     font-size: 0.875rem;
 }
 
-/* Events Page Styles */
 .event-categories {
     padding: 3rem 0;
 }
@@ -1093,7 +991,6 @@ body {
     border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
-/* Practice Platforms */
 .practice-platforms {
     padding: 5rem 0;
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.5), transparent);
@@ -1143,7 +1040,6 @@ body {
     color: #ec4899;
 }
 
-/* Contact Page */
 .contact-section {
     padding: 5rem 0;
 }
@@ -1284,7 +1180,6 @@ body {
     height: 1.5rem;
 }
 
-/* Map Section */
 .map-section {
     padding: 5rem 0;
     background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.5));
@@ -1313,7 +1208,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* FAQ Section */
 .faq-section {
     padding: 5rem 0;
 }
@@ -1349,17 +1243,15 @@ body {
     line-height: 1.7;
 }
 
-/* Utility Classes */
 .text-center {
     text-align: center;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .two-col-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }

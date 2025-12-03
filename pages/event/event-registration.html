@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assect/logo.png">
     <title>Event Registration - Cybersecurity Club</title>
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="registration-styles.css">
-    <style>
+    <!-- <style>
         :root {
             --accent: #00ffd1;
             --text-primary: #e2e8f0;
@@ -14,186 +17,10 @@
             --text-muted: #64748b;
             --border: rgba(71, 85, 105, 0.2);
         }
-
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: linear-gradient(180deg, rgba(2,6,12,0.6), rgba(2,6,12,0.25));
-            backdrop-filter: blur(8px) saturate(1.05);
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-        }
-
-        .nav-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            height: 64px;
-        }
-
-        .nav-left, .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            position: absolute;
-        }
-
-        .nav-left {
-            left: 1rem;
-        }
-
-        .nav-right {
-            right: 1rem;
-        }
-
-        .nav-center {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: auto;
-        }
-
-        .nav-center a {
-            pointer-events: auto;
-            text-decoration: none;
-        }
-
-        .nav-center-logo {
-            width: 150px;
-            height: 150px;
-            display: inline-block;
-            object-fit: cover;
-            border-radius: 8px;
-            padding-top: 25px;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-center-logo:hover {
-            transform: scale(1.1);
-        }
-
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
-            padding: 0.5rem 0.75rem;
-            border-bottom: 2px solid transparent;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-
-        .nav-link.active {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-            font-weight: 600;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            position: absolute;
-            right: 1rem;
-            color: var(--text-secondary);
-        }
-
-        .hamburger {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text-secondary);
-            position: relative;
-            transition: background 0.3s;
-        }
-
-        .hamburger::before,
-        .hamburger::after {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 2px;
-            background: var(--text-secondary);
-            transition: transform 0.3s;
-        }
-
-        .hamburger::before {
-            top: -8px;
-        }
-
-        .hamburger::after {
-            top: 8px;
-        }
-
-        .mobile-menu {
-            display: none;
-            background: rgba(15, 23, 42, 0.98);
-            border-top: 1px solid var(--border);
-            padding: 1rem;
-            position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-            z-index: 999;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-link {
-            display: block;
-            color: var(--text-secondary);
-            text-decoration: none;
-            padding: 0.75rem 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .mobile-link:hover, .mobile-link.active {
-            color: var(--accent);
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                max-width: 100%;
-            }
-
-            .nav-left,
-            .nav-right {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-                z-index: 1001;
-            }
-
-            .nav-center-logo {
-                width: 80px;
-                height: 80px;
-                padding-top: 10px;
-            }
-        }
-    </style>
+    </style> -->
 </head>
+
 <body>
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-left">
@@ -215,7 +42,7 @@
                 <span class="hamburger"></span>
             </button>
         </div>
-        <div class="mobile-menu hidden" id="mobileMenu">
+        <div class="mobile-menu" id="mobileMenu">
             <a href="/index.html" class="mobile-link">Home</a>
             <a href="/pages/about.html" class="mobile-link">About</a>
             <a href="/pages/resource.html" class="mobile-link">Resources</a>
@@ -225,7 +52,6 @@
         </div>
     </nav>
 
-    <!-- Registration Header -->
     <section class="registration-header">
         <div class="container">
             <div class="header-content">
@@ -236,11 +62,9 @@
         </div>
     </section>
 
-    <!-- Simple Registration Form -->
     <section class="registration-form-section">
         <div class="container">
             <div class="registration-layout">
-                <!-- Main Form -->
                 <div class="registration-main">
                     <form id="eventRegistrationForm" class="registration-form">
                         <div class="form-step active">
@@ -271,7 +95,8 @@
 
                             <div class="form-group">
                                 <label for="institution">Institution/Organization *</label>
-                                <input type="text" id="institution" name="institution" required placeholder="University Name">
+                                <input type="text" id="institution" name="institution" required
+                                    placeholder="University Name">
                             </div>
 
                             <div class="form-group">
@@ -291,12 +116,14 @@
 
                             <div class="form-group">
                                 <label for="interests">Areas of Interest</label>
-                                <textarea id="interests" name="interests" rows="4" placeholder="What topics are you most interested in? (Optional)"></textarea>
+                                <textarea id="interests" name="interests" rows="4"
+                                    placeholder="What topics are you most interested in? (Optional)"></textarea>
                             </div>
 
                             <div class="form-group">
                                 <label for="dietary">Dietary Restrictions</label>
-                                <input type="text" id="dietary" name="dietary" placeholder="Vegetarian, Vegan, Allergies, etc. (Optional)">
+                                <input type="text" id="dietary" name="dietary"
+                                    placeholder="Vegetarian, Vegan, Allergies, etc. (Optional)">
                                 <small>Let us know if you have any dietary requirements</small>
                             </div>
 
@@ -310,7 +137,8 @@
                             <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-                                    <span>I agree to the <a href="#">terms and conditions</a> and <a href="#">code of conduct</a> *</span>
+                                    <span>I agree to the <a href="#">terms and conditions</a> and <a href="#">code of
+                                            conduct</a> *</span>
                                 </label>
                             </div>
 
@@ -321,7 +149,6 @@
                         </div>
                     </form>
 
-                    <!-- Success Message -->
                     <div id="successMessage" class="success-message" style="display: none;">
                         <div class="success-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -340,7 +167,6 @@
                     </div>
                 </div>
 
-                <!-- Sidebar -->
                 <div class="registration-sidebar">
                     <div class="sidebar-card">
                         <h3>Event Details</h3>
@@ -460,27 +286,20 @@
         </div>
     </footer> -->
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script src="event-registration-script.js"></script>
 
     <script>
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
         if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuBtn.addEventListener('click', function () {
                 mobileMenu.classList.toggle('active');
             });
         }
 
-        // Close menu when a link is clicked
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-            });
-        });
     </script>
 </body>
+
 </html>

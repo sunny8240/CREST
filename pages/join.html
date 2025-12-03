@@ -4,13 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join CREST - Cybersecurity Club</title>
+    <meta name="description"
+        content="Join CREST Cybersecurity Club - Become part of our community and grow your cybersecurity skills with us.">
+    <meta name="keywords" content="join, CREST, membership, cybersecurity club, community">
+    <meta name="author" content="CREST Cybersecurity Club">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Join CREST - Cybersecurity Club">
+    <meta property="og:description"
+        content="Join CREST Cybersecurity Club and become part of our thriving community of security enthusiasts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crestclub.vercel.app/pages/join.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join CREST">
+    <link rel="icon" type="image/x-icon" href="/assect/logo.png">
+    <meta name="twitter:description" content="Join the CREST Cybersecurity Club">
+    <link rel="canonical" href="https://crestclub.vercel.app/pages/join.html">
+    <title>Join CREST - Cybersecurity Club | Membership</title>
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/join.css">
-   
+
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-left">
@@ -46,7 +61,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-bg-circle-1"></div>
@@ -108,7 +122,6 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
     <section class="benefits-section">
         <div class="container">
             <div class="section-header">
@@ -203,7 +216,6 @@
         </div>
     </section>
 
-    <!-- Form Section -->
     <section class="form-section">
         <div class="container">
             <div class="form-header">
@@ -211,7 +223,6 @@
                 <p class="form-subtitle">Complete the form below to join our community</p>
             </div>
 
-            <!-- Progress Bar -->
             <div class="progress-container">
                 <div class="progress-steps">
                     <div class="progress-step-group">
@@ -236,9 +247,7 @@
                 </div>
             </div>
 
-            <!-- Form -->
             <form id="applicationForm" class="form-container">
-                <!-- Step 1: Personal Info -->
                 <div class="form-step active" data-step="1">
                     <h3 class="step-title purple">Personal Information</h3>
 
@@ -265,7 +274,6 @@
                     </div>
                 </div>
 
-                <!-- Step 2: Academic Info -->
                 <div class="form-step" data-step="2">
                     <h3 class="step-title indigo">Academic Details</h3>
 
@@ -301,7 +309,6 @@
                     </div>
                 </div>
 
-                <!-- Step 3: Interests -->
                 <div class="form-step" data-step="3">
                     <h3 class="step-title pink">Areas of Interest</h3>
                     <p style="color: #94a3b8; margin-bottom: 1.5rem;">Select all topics that interest you (select at
@@ -313,8 +320,7 @@
                             Security</button>
                         <button type="button" class="interest-btn" data-interest="Penetration Testing">Penetration
                             Testing</button>
-                        <button type="button" class="interest-btn"
-                            data-interest="Cryptography">Cryptography</button>
+                        <button type="button" class="interest-btn" data-interest="Cryptography">Cryptography</button>
                         <button type="button" class="interest-btn" data-interest="Malware Analysis">Malware
                             Analysis</button>
                         <button type="button" class="interest-btn" data-interest="CTF Competitions">CTF
@@ -326,7 +332,6 @@
                     <input type="hidden" name="interests" id="interestsInput">
                 </div>
 
-                <!-- Step 4: Additional Details -->
                 <div class="form-step" data-step="4">
                     <h3 class="step-title emerald">Tell Us More</h3>
 
@@ -357,7 +362,6 @@
                     </div>
                 </div>
 
-                <!-- Navigation Buttons -->
                 <div class="form-navigation">
                     <button type="button" class="btn btn-back" id="backBtn" style="display: none;">Back</button>
                     <button type="button" class="btn btn-next" id="nextBtn">
@@ -382,7 +386,6 @@
                 </div>
             </form>
 
-            <!-- Success Screen -->
             <div class="success-screen" id="successScreen">
                 <div class="success-content">
                     <div class="success-icon">
@@ -428,7 +431,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>
@@ -438,189 +440,7 @@
         </div>
     </footer>
 
-    <script>
-        // State
-        let currentStep = 1;
-        const totalSteps = 4;
-        let selectedInterests = [];
-
-        // Elements
-        const form = document.getElementById('applicationForm');
-        const backBtn = document.getElementById('backBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const submitBtn = document.getElementById('submitBtn');
-        const successScreen = document.getElementById('successScreen');
-        const resetBtn = document.getElementById('resetBtn');
-        const interestsGrid = document.getElementById('interestsGrid');
-        const interestsInput = document.getElementById('interestsInput');
-
-        // Mobile menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-            });
-
-            const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
-                });
-            });
-        }
-
-        // Update progress bar
-        function updateProgress() {
-            // Update step circles
-            document.querySelectorAll('.progress-step').forEach((step, index) => {
-                if (index + 1 <= currentStep) {
-                    step.classList.add('active');
-                } else {
-                    step.classList.remove('active');
-                }
-            });
-
-            // Update lines
-            for (let i = 1; i < totalSteps; i++) {
-                const line = document.getElementById(`line${i}`);
-                if (i < currentStep) {
-                    line.classList.add('active');
-                } else {
-                    line.classList.remove('active');
-                }
-            }
-        }
-
-        // Show step
-        function showStep(step) {
-            document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
-            document.querySelector(`.form-step[data-step="${step}"]`).classList.add('active');
-
-            // Update buttons
-            if (step === 1) {
-                backBtn.style.display = 'none';
-            } else {
-                backBtn.style.display = 'flex';
-            }
-
-            if (step === totalSteps) {
-                nextBtn.style.display = 'none';
-                submitBtn.style.display = 'flex';
-            } else {
-                nextBtn.style.display = 'flex';
-                submitBtn.style.display = 'none';
-            }
-
-            updateProgress();
-        }
-
-        // Validate current step
-        function validateStep() {
-            const currentStepElement = document.querySelector(`.form-step[data-step="${currentStep}"]`);
-            const inputs = currentStepElement.querySelectorAll('input[required], select[required], textarea[required]');
-
-            for (let input of inputs) {
-                if (!input.value.trim()) {
-                    input.focus();
-                    return false;
-                }
-            }
-
-            // Special validation for interests step
-            if (currentStep === 3 && selectedInterests.length === 0) {
-                alert('Please select at least one area of interest');
-                return false;
-            }
-
-            return true;
-        }
-
-        // Next button
-        nextBtn.addEventListener('click', () => {
-            if (validateStep() && currentStep < totalSteps) {
-                currentStep++;
-                showStep(currentStep);
-            }
-        });
-
-        // Back button
-        backBtn.addEventListener('click', () => {
-            if (currentStep > 1) {
-                currentStep--;
-                showStep(currentStep);
-            }
-        });
-
-        // Interest buttons
-        interestsGrid.addEventListener('click', (e) => {
-            if (e.target.classList.contains('interest-btn')) {
-                const interest = e.target.dataset.interest;
-                const index = selectedInterests.indexOf(interest);
-
-                if (index > -1) {
-                    selectedInterests.splice(index, 1);
-                    e.target.classList.remove('selected');
-                } else {
-                    selectedInterests.push(interest);
-                    e.target.classList.add('selected');
-                }
-
-                interestsInput.value = selectedInterests.join(',');
-            }
-        });
-
-        // Form submission
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            if (!validateStep()) {
-                return;
-            }
-
-            // Show loading
-            submitBtn.disabled = true;
-            document.getElementById('submitText').style.display = 'none';
-            document.getElementById('submitLoading').style.display = 'flex';
-
-            // Collect form data
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-            data.interests = selectedInterests;
-
-            // Simulate submission
-            await new Promise(resolve => setTimeout(resolve, 2000));
-
-            console.log('Form submitted:', data);
-
-            // Show success screen
-            document.getElementById('userEmail').textContent = data.email;
-            form.style.display = 'none';
-            document.querySelector('.progress-container').style.display = 'none';
-            successScreen.classList.add('active');
-
-            // Reset button states
-            submitBtn.disabled = false;
-            document.getElementById('submitText').style.display = 'flex';
-            document.getElementById('submitLoading').style.display = 'none';
-        });
-
-        // Reset form
-        resetBtn.addEventListener('click', () => {
-            form.reset();
-            currentStep = 1;
-            selectedInterests = [];
-            document.querySelectorAll('.interest-btn').forEach(btn => btn.classList.remove('selected'));
-            showStep(1);
-            form.style.display = 'block';
-            document.querySelector('.progress-container').style.display = 'block';
-            successScreen.classList.remove('active');
-        });
-
-        // Initialize
-        showStep(1);
-    </script>
+    <script src="/js/join.js"></script>
 </body>
 
 </html>

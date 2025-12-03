@@ -11,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -94,8 +93,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-
-
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -138,7 +135,6 @@ body {
     display: none !important;
 }
 
-/* About Hero Section */
 .about-hero {
     position: relative;
     min-height: 70vh;
@@ -256,7 +252,6 @@ body {
     animation: fadeInUp 0.6s ease-out 0.4s backwards;
 }
 
-/* Section Styles */
 .story-section,
 .mission-section,
 .activities-section,
@@ -305,7 +300,6 @@ body {
     margin: 0 auto;
 }
 
-/* Story Cards */
 .story-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -382,7 +376,6 @@ body {
     line-height: 1.75;
 }
 
-/* Mission Cards */
 .mission-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -445,7 +438,6 @@ body {
     font-size: 1.0625rem;
 }
 
-/* Activities Grid */
 .activities-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -536,7 +528,6 @@ body {
     color: #06b6d4;
 }
 
-/* Join Section */
 .join-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -622,7 +613,6 @@ body {
     transform: translateX(4px);
 }
 
-/* Terminal Visual */
 .visual-card {
     position: relative;
     padding: 1rem;
@@ -720,7 +710,6 @@ body {
     }
 }
 
-/* Footer CTA */
 .footer-cta {
     padding: 5rem 0;
     text-align: center;
@@ -795,7 +784,6 @@ body {
     box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
 }
 
-/* Animations */
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -820,7 +808,6 @@ body {
     }
 }
 
-/* Responsive Design */
 @media (min-width: 640px) {
     .cta-buttons {
         flex-direction: row;

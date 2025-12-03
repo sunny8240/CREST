@@ -4,12 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Club - Contact Us</title>
+    <meta name="description"
+        content="Contact CREST Cybersecurity Club - Get in touch with us for collaboration, questions, or to join our community.">
+    <meta name="keywords" content="contact, CREST, cybersecurity club, email, get in touch">
+    <meta name="author" content="CREST Cybersecurity Club">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Contact CREST - Cybersecurity Club">
+    <meta property="og:description"
+        content="Reach out to CREST Cybersecurity Club. Get in touch with our team for partnerships and inquiries.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crestclub.vercel.app/pages/contact.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact CREST">
+    <link rel="icon" type="image/x-icon" href="/assect/logo.png">
+    <meta name="twitter:description" content="Get in touch with CREST Cybersecurity Club">
+    <link rel="canonical" href="https://crestclub.vercel.app/pages/contact.html">
+    <title>Contact CREST - Cybersecurity Club | Get In Touch</title>
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/contact.css">
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-left">
@@ -18,7 +33,6 @@
                 <a href="resource.html" class="nav-link">Resources</a>
             </div>
 
-            <!-- center large square logo -->
             <div class="nav-center">
                 <a href="../index.html" aria-label="Home">
                     <img src="../assect/logo.png" alt="CREST" class="nav-center-logo">
@@ -45,17 +59,15 @@
     </nav>
 
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <div class="header-badge">Get in Touch</div>
             <h1>Contact Us</h1>
             <p>Have questions? We'd love to hear from you</p>
         </div>
 
-        <!-- Contact Grid -->
         <div class="contact-grid">
-            <!-- Contact Form -->
-            <div class="card" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.6) 100%);">
+            <div class="card"
+                style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.6) 100%);">
                 <div class="card-header">
                     <div class="icon-box" style="background: linear-gradient(135deg, #7c3aed, #ec4899);">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -84,7 +96,8 @@
 
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                            <textarea id="message" name="message" required
+                                placeholder="Your message here..."></textarea>
                         </div>
 
                         <button type="submit" class="btn-submit">
@@ -110,9 +123,7 @@
                 </div>
             </div>
 
-            <!-- Contact Information -->
             <div class="info-cards">
-                <!-- Email Card -->
                 <div class="info-card email">
                     <div class="card-header">
                         <div class="icon-box purple">
@@ -129,7 +140,6 @@
                     <a href="mailto:info@crestclub.com">info@crestclub.com</a>
                 </div>
 
-                <!-- Phone Card -->
                 <div class="info-card phone">
                     <div class="card-header">
                         <div class="icon-box blue">
@@ -145,7 +155,6 @@
                     <a href="tel:+1234567890">+1 (234) 567-890</a>
                 </div>
 
-                <!-- Location Card -->
                 <div class="info-card location">
                     <div class="card-header">
                         <div class="icon-box green">
@@ -166,7 +175,6 @@
             </div>
         </div>
 
-        <!-- Social Media Section -->
         <div class="social-section">
             <h2>Connect With Us</h2>
             <p>Follow us on social media for updates and cybersecurity tips</p>
@@ -212,7 +220,6 @@
             </div>
         </div>
 
-        <!-- FAQ Section -->
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
 
@@ -245,7 +252,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -254,7 +260,6 @@
                 mobileMenu.classList.toggle('active');
             });
 
-            // Close menu when clicking on a link
             const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
@@ -263,7 +268,6 @@
             });
         }
 
-        // Form submission
         const messageForm = document.getElementById('messageForm');
         const contactForm = document.getElementById('contactForm');
         const successMessage = document.getElementById('successMessage');
@@ -271,11 +275,9 @@
         messageForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Show success message
             contactForm.classList.add('hidden');
             successMessage.classList.remove('hidden');
 
-            // Reset form after 3 seconds
             setTimeout(() => {
                 messageForm.reset();
                 successMessage.classList.add('hidden');
@@ -283,6 +285,7 @@
             }, 3000);
         });
     </script>
+    <!-- <script src="/js/script.js"></script> -->
 </body>
 
 </html>

@@ -4,180 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - CREST Cybersecurity Club</title>
+    <meta name="description"
+        content="Learn about CREST Cybersecurity Club - Our mission, values, and community. Meet our team of cybersecurity experts and passionate learners.">
+    <meta name="keywords"
+        content="about CREST, cybersecurity club, ethical hackers, security community, cybersecurity team">
+    <meta name="author" content="CREST Cybersecurity Club">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About CREST - Cybersecurity Club">
+    <meta property="og:description"
+        content="Discover CREST Cybersecurity Club - Our mission to educate and inspire the next generation of cybersecurity professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crestclub.vercel.app/pages/about.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About CREST Cybersecurity Club">
+    <link rel="icon" type="image/x-icon" href="/assect/logo.png">
+    <meta name="twitter:description" content="Learn about our cybersecurity club and community">
+    <link rel="canonical" href="https://crestclub.vercel.app/pages/about.html">
+    <title>About CREST - Cybersecurity Club | Our Mission & Team</title>
     <link rel="stylesheet" href="/css/about.css">
-    <style>
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: linear-gradient(180deg, rgba(2, 6, 12, 0.6), rgba(2, 6, 12, 0.25));
-            backdrop-filter: blur(8px) saturate(1.05);
-            border-bottom: 1px solid rgba(71, 85, 105, 0.2);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-        }
-
-        .nav-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            height: 64px;
-        }
-
-        .nav-left,
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            position: absolute;
-        }
-
-        .nav-left {
-            left: 1rem;
-        }
-
-        .nav-right {
-            right: 1rem;
-        }
-
-        .nav-center {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-center-logo {
-            width: 150px;
-            height: 150px;
-            display: inline-block;
-            object-fit: cover;
-            border-radius: 8px;
-            padding-top: 25px;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-center-logo:hover {
-            transform: scale(1.1);
-        }
-
-        .nav-link {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
-            padding: 0.5rem 0.75rem;
-            border-bottom: 2px solid transparent;
-        }
-
-        /* Override legacy about.css underline pseudo-element */
-        .nav-link::after {
-            display: none !important;
-        }
-
-        .nav-link:hover {
-            color: #00ffd1;
-            border-bottom-color: #00ffd1;
-        }
-
-        .nav-link.active {
-            color: #00ffd1;
-            border-bottom-color: #00ffd1;
-            font-weight: 600;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .hamburger {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: #94a3b8;
-            position: relative;
-            transition: background 0.3s;
-        }
-
-        .hamburger::before,
-        .hamburger::after {
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 2px;
-            background: #94a3b8;
-            transition: transform 0.3s;
-        }
-
-        .hamburger::before {
-            top: -8px;
-        }
-
-        .hamburger::after {
-            top: 8px;
-        }
-
-        .mobile-menu {
-            display: none;
-            background: rgba(15, 23, 42, 0.98);
-            border-top: 1px solid rgba(71, 85, 105, 0.2);
-            padding: 1rem;
-            position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-            z-index: 999;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-link {
-            display: block;
-            color: #94a3b8;
-            text-decoration: none;
-            padding: 0.75rem 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .mobile-link:hover,
-        .mobile-link.active {
-            color: #00ffd1;
-        }
-
-        @media (max-width: 768px) {
-
-            .nav-left,
-            .nav-right {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-                position: absolute;
-                right: 1rem;
-                top: 1rem;
-                z-index: 1001;
-            }
-        }
-    </style>
-    
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 
 <body>
-    <!-- Navbar (standardized) -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-left">
@@ -186,7 +34,6 @@
                 <a href="resource.html" class="nav-link">Resources</a>
             </div>
 
-            <!-- center large square logo -->
             <div class="nav-center">
                 <a href="../index.html" aria-label="Home">
                     <img src="../assect/logo.png" alt="CREAST" class="nav-center-logo">
@@ -212,7 +59,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="about-hero">
         <canvas id="gridCanvas" class="grid-canvas"></canvas>
 
@@ -238,7 +84,6 @@
         </div>
     </section>
 
-    <!-- Story Section -->
     <section class="story-section">
         <div class="section-container">
             <div class="section-header">
@@ -286,7 +131,6 @@
         </div>
     </section>
 
-    <!-- Mission & Vision -->
     <section class="mission-section">
         <div class="section-container">
             <div class="mission-grid">
@@ -325,7 +169,6 @@
         </div>
     </section>
 
-    <!-- What We Do -->
     <section class="activities-section">
         <div class="section-container">
             <div class="section-header">
@@ -464,7 +307,6 @@
         </div>
     </section>
 
-    <!-- Why Join -->
     <section class="join-section">
         <div class="section-container">
             <div class="join-content">
@@ -594,7 +436,6 @@
         </div>
     </section>
 
-    <!-- Footer CTA -->
     <section class="footer-cta">
         <div class="section-container">
             <h2 class="cta-title">Ready to Start Your Journey?</h2>
@@ -619,7 +460,6 @@
         </div>
     </section>
 
-    <!-- Developer Section -->
     <section
         style="background: linear-gradient(135deg, rgba(88, 28, 135, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%); padding: 4rem 1rem; margin-top: 4rem;">
         <div class="section-container">
@@ -637,7 +477,6 @@
                     onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 35px 60px -12px rgba(168, 85, 247, 0.3)';"
                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 25px 50px -12px rgba(0, 0, 0, 0.5)';">
                     <div style="padding: 2.5rem; position: relative; z-index: 1;">
-                        <!-- Developer Avatar Section -->
                         <div style="text-align: center; margin-bottom: 2rem;">
                             <!-- <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #a855f7, #ec4899); padding: 3px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);">
                                  <div style="width: 100%; background: url('/assect/dev/profile.png'); height: 100%; border-radius: 50%; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
@@ -655,7 +494,6 @@
                                 specializing in penetration testing and vulnerability assessment.</p>
                         </div>
 
-                        <!-- Skills Tags -->
                         <div
                             style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 2rem;">
                             <span
@@ -669,7 +507,6 @@
                                 Tester</span>
                         </div>
 
-                        <!-- Social Links & CTA (matching team card style) -->
                         <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
                             <a href="mailto:sunny.sharma24@pcu.edu.in" title="Email"
                                 style="width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #ec4899, #f43f5e); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); transition: all 0.3s; color: #fff; text-decoration: none; position: relative;"
@@ -718,7 +555,6 @@
                                     style="position: absolute; top: -2.5rem; left: 50%; transform: translateX(-50%); padding: 0.375rem 0.75rem; border-radius: 0.5rem; background: #0f172a; color: #fff; font-size: 0.75rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
                                     GitHub</div>
                             </a>
-                            <!-- TryHackMe (ONLY Image + TOOLTIP) -->
                             <a href="https://tryhackme.com/p/0xSunny" target="_blank" rel="noopener noreferrer" style="position: relative; width: 2.75rem; height: 2.75rem; border-radius: 0.75rem;
                                 display: inline-flex; align-items: center; justify-content: center; overflow: hidden;
                                 transition: 0.25s; padding: 0; background: none; border: none;"
@@ -734,7 +570,6 @@
 
                         </div>
 
-                        <!-- View Full Profile Button -->
                         <a href="/assect/dev/MyResume.pdf"
                             style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.875rem 1.5rem; background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); color: #fff; text-decoration: none; border: none; border-radius: 0.75rem; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);"
                             onmouseover="this.style.boxShadow='0 0 30px rgba(168, 85, 247, 0.6)'; this.style.transform='translateY(-2px)';"
